@@ -217,12 +217,17 @@ async function readStudents() {
   const all = await Student.find();
   console.log(all);
 }
-
+ //readStudents(); 
 // update document
    async function updateStudent() {
          await Student.updateOne({ name: "Ali" }, { age: 22 });
          console.log("✅ Updated Ali");
       }
-      updateStudent();
+      //updateStudent(); //commented so no duplicates are created
 
 // delete document
+  async function deleteStudent() {
+         await Student.deleteOne({ name: "Sara" });
+      console.log("✅ Deleted Sara");
+      }
+      deleteStudent();
