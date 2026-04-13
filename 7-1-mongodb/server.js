@@ -217,7 +217,7 @@ async function readStudents() {
   const all = await Student.find();
   console.log(all);
 }
- //readStudents(); 
+ readStudents(); 
 // update document
    async function updateStudent() {
          await Student.updateOne({ name: "Ali" }, { age: 22 });
@@ -230,4 +230,4 @@ async function readStudents() {
          await Student.deleteOne({ name: "Sara" });
       console.log("✅ Deleted Sara");
       }
-      deleteStudent();
+      //deleteStudent();
