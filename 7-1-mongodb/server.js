@@ -189,12 +189,18 @@ import mongoose from "mongoose";
 // establish connection
 mongoose
   .connect("mongodb+srv://kalthamalhashmi_db_user:Kaltham2005%40%40@cluster0.0atq0qn.mongodb.net/TestDB")
-  .then(() => console.log("✅ ==Connected to MongoDB"))
+  .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
 
 // define schema
+const studentSchema = new mongoose.Schema({
+  name: String,
+  age: Number,
+  major: String
+});
 
+const Student = mongoose.model("Student", studentSchema);
 
 // create document
 
