@@ -210,10 +210,13 @@ async function createStudents() {
   ]);
   console.log("✅ Inserted");
 }
-createStudents();
+//createStudents(); //commented so no duplicates are created
 
 // read document
-
+async function readStudents() {
+  const all = await Student.find();
+  console.log(all);
+}
 
 // update document
 
